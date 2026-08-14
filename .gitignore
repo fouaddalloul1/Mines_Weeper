@@ -1,1 +1,28 @@
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
 
+# Java build output
+out/
+build/
+target/
+*.class
+*.jar
+*.war
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+~*
+
+# Runtime / local save data
+*.dat
