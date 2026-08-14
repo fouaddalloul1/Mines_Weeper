@@ -68,7 +68,7 @@ public class LoadGame {
     }
 
     public static GameData desrialize(String fileName) throws IOException, ClassNotFoundException {
-        File minesWeeperDir = new File(System.getProperty("user.home")+File.separator+"MinesWeeperGame"+File.separator+"Saved games");
+        File minesWeeperDir = new File(System.getProperty("user.home")+File.separator+"MinesWeeperGame"+File.separator+"Saved Games");
         FileInputStream fileIn = new FileInputStream(minesWeeperDir.getAbsolutePath()+File.separator+"f$G"+fileName+".dat");
         ObjectInputStream objectInputStream = new ObjectInputStream(fileIn);
         loadGame = (GameData) objectInputStream.readObject();

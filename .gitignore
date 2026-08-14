@@ -26,3 +26,6 @@ Thumbs.db
 
 # Runtime / local save data
 *.dat
+
+# Optional background music asset
+src/Sound/Sounds/alheba.wav

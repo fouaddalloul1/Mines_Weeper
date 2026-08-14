@@ -153,7 +153,7 @@ public class LoadGameGui implements Runnable,java.io.Serializable{
         initBtnLabel();
     }
     public static void deleteGame(String fileName){
-        File f = new File(System.getProperty("user.home")+File.separator+"MinesWeeperGame"+File.separator+"Saved games"+File.separator+"f$G"+fileName+".dat");
+        File f = new File(System.getProperty("user.home")+File.separator+"MinesWeeperGame"+File.separator+"Saved Games"+File.separator+"f$G"+fileName+".dat");
         f.delete();
         updateLoadGui();
     }
@@ -211,8 +211,17 @@ public class LoadGameGui implements Runnable,java.io.Serializable{
         gamePanel = new JPanel[10];
         JLabel gameNames[] =new JLabel[10];
         JLabel gameTimes[] =new JLabel[10];
-        File dir = new File(System.getProperty("user.home")+File.separator+"MinesWeeperGame"+File.separator+"Saved games");
+        File dir = new File(System.getProperty("user.home")+File.separator+"MinesWeeperGame"+File.separator+"Saved Games");
+        if (!dir.exists()) {
+            dir.mkdirs();
+        }
+
         File elements[] = dir.listFiles();
+
+        if (elements == null) {
+            return;
+        }
+
         for (File element:elements){
             String fileName = element.getName();
             String fileDomain = fileName.substring(fileName.length()-4,fileName.length());

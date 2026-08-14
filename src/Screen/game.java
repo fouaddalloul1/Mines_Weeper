@@ -420,7 +420,7 @@ public class game implements java.io.Serializable {
         if (Home.multiPlayer&&one) {
             GameSounds1.gameEffect1.stop();
             one=false;
-            GameSounds.gameEffect.setFile("Sound/sounds/BombEffect.wav");
+            GameSounds.gameEffect.setFile("Sound/Sounds/BombEffect.wav");
             GameSounds.gameEffect.control((float)Settings.gameVolumeSlider.getValue());
             if(!Settings.gameVolumeCheck.isSelected())
             {
@@ -431,7 +431,7 @@ public class game implements java.io.Serializable {
         if (Home.multiPlayer&&!one) {
             GameSounds.gameEffect.stop();
             one=true;
-            GameSounds1.gameEffect1.setFile("Sound/sounds/BombEffect.wav");
+            GameSounds1.gameEffect1.setFile("Sound/Sounds/BombEffect.wav");
             GameSounds1.gameEffect1.control((float)Settings.gameVolumeSlider.getValue());
             if(!Settings.gameVolumeCheck.isSelected())
             {
@@ -442,7 +442,7 @@ public class game implements java.io.Serializable {
     }
 
     public static void loseEffect(){
-       GameSounds.loseEffect.setFile("Sound/sounds/gameOverEffect.wav");
+       GameSounds.loseEffect.setFile("Sound/Sounds/gameOverEffect.wav");
             GameSounds.loseEffect.control((float)Settings.gameVolumeSlider.getValue());
             GameSounds.musicGame.pause();
             if(!Settings.gameVolumeCheck.isSelected())

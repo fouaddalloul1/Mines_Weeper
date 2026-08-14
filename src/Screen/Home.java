@@ -116,7 +116,7 @@ public class Home extends Thread implements java.io.Serializable{
        loadBtn.setFont(new Font("Serif",Font.BOLD,35));
        loadBtn.addActionListener(actionListener);
        loadBtn.addMouseListener(bHandler);
-       File minesweeperDir = new File(System.getProperty("user.home")+File.separator+"MinesWeeperGame"+File.separator+"Saved games"+ File.separator + "f$GautoSave.dat");
+       File minesweeperDir = new File(System.getProperty("user.home")+File.separator+"MinesWeeperGame"+File.separator+"Saved Games"+ File.separator + "f$GautoSave.dat");
        if (minesweeperDir.exists()) {
            backGroundLabel.add(loadBtn);
        }

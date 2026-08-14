@@ -125,7 +125,7 @@ public class Rules extends Thread implements java.io.Serializable{
                     GameSounds.wonEffect.play();
                 return true;}}
         else if(Grid.visableCells()== (Grid.numOfRows*Grid.numOfCol)-Grid.noOfBombs){
-            GameSounds.wonEffect.setFile("Sound/sounds/wonEffect.wav");
+            GameSounds.wonEffect.setFile("Sound/Sounds/wonEffect.wav");
             GameSounds.wonEffect.control((float) Settings.gameVolumeSlider.getValue());
             if(!Settings.gameVolumeCheck.isSelected())
             GameSounds.wonEffect.play();
